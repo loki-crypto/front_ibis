@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto IBIS - Transformando Vidas</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+
+    <main class="container">
+        
+        <header class="header">
+            <img src="images/logo.png" alt="Logo Instituto IBIS" class="profile-pic">
+            
+            <h1>Instituto IBIS</h1>
+            <p>Transformando vidas através da educação e inclusão ✨</p>
+        </header>
+        
+        <section class="links-section">
+            
+            <a href="https://wa.me/5583988855738" target="_blank" rel="noopener noreferrer" class="link-button">
+                <i class="fa-brands fa-whatsapp"></i>
+                Fale com nossa atendente
+            </a>
+            
+            <a href="https://www.instagram.com/ibis.instituto" target="_blank" rel="noopener noreferrer" class="link-button">
+                <i class="fa-brands fa-instagram"></i>
+                Visite nosso Instagram
+            </a>
+            
+            <a href="#" id="openModalBtn" class="link-button">
+                <i class="fa-solid fa-heart"></i>
+                Objetivo do Instituto IBIS
+            </a>
+            
+            <a href="https://www.google.com/maps/search/?api=1&query=Instituto+IBIS+Conde+PB" target="_blank" rel="noopener noreferrer" class="link-button">
+                <i class="fa-solid fa-map-location-dot"></i>
+                Localização
+            </a>
+
+        </section>
+
+        <section class="info-section">
+            <h2>🕐 Horário de Funcionamento</h2>
+            <p>
+                <strong>Segunda a Sexta</strong><br>
+                das 08h às 17h
+            </p>
+        </section>
+        
+        <footer>
+            <div>
+                <p>email: ibisinstituto6@gmail.com</p>
+            </div>
+        </footer>
+    </main>
+
+    <div id="servicesModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close">×</span>
+            
+            <h2>💙 Objetivo do Instituto IBIS</h2>
+            
+            <h3 class="modal-subtitle-green">🎯 Principal</h3>
+            <p class="modal-description">Oferecer atividades educativas, culturais e socioemocionais, 
+                para desenvolver o crescimento como indivíduo das crianças e adolescentes</p>
+            
+            <h4 class="modal-subtitle-blue">📚 Atividades</h4>
+            <p>✓ Auxílio educacional</p> 
+            <p>✓ Atividades culturais</p>
+            <p>✓ Oficinas pedagógicas</p>
+
+            <h3 class="modal-subtitle-red">❤️ Saúde e Bem-estar</h3>
+            <p>✓ Atendimento psicológico</p>
+            <p>✓ Orientação nutricional</p>
+            <p>✓ Atendimentos odontológicos</p>
+            
+            <h4 class="modal-subtitle-pink">💻 Inclusão Digital</h4>
+            <p>✓ Aulas de informática</p>
+            <p>✓ Lazer digital</p>
+        </div>
+    </div>
+
+    <script>
+        // 1. Pegar os elementos do DOM
+        var modal = document.getElementById("servicesModal");
+        var btn = document.getElementById("openModalBtn");
+        var span = document.querySelector(".modal-close");
+
+        // 2. Quando o usuário clicar no botão, abre o modal
+        btn.onclick = function(event) {
+            event.preventDefault(); // Impede o link de pular para o topo da página
+            modal.style.display = "flex"; // Usa 'flex' por causa do CSS de centralização
+        }
+
+        // 3. Quando o usuário clicar no (x), fecha o modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // 4. Quando o usuário clicar fora do conteúdo do modal (no fundo escuro), fecha o modal
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    
+</body>
+</html>
